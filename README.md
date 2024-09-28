@@ -6,4 +6,4 @@ My Arch Linux Configs
 - Dracut and UKI
 - Systemd boot
 - Networking with iwd
-
+- Sway window manager
