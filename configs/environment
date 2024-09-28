@@ -1,0 +1,24 @@
+#
+# This file is parsed by pam_env module
+#
+# Place in /etc/environment
+#
+# Syntax: simple "KEY=VAL" pairs on seperate lines
+#
+
+# XDG Settings
+XDG_CURRENT_DESKTOP=sway
+XDG_SESSION=wayland
+XDG_SESSION_DESKTOP=sway
+
+# Firefox settings
+MOZ_ENABLE_WAYLAND=1
+
+# QT Settings
+QT_AUTO_SCREEN_SCALE_FACTOR=1
+QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+QT_QPA_PLATFORM=wayland
+QT_QPA_PLATFORMTHEME=qt6ct
+
+# GDK Settings
+GDK_BACKEND=wayland
