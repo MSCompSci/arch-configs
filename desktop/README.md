@@ -104,7 +104,7 @@ source ~/.bashrc
 # Add sway config
 mkdir .config/sway
 
-curl https://raw.githubusercontent.com/MSCompSci/arch-configs/refs/heads/main/configs/config > ~/.config/sway/config
+curl https://raw.githubusercontent.com/MSCompSci/arch-configs/refs/heads/main/configs/sway/config > ~/.config/sway/config
 ```
 
 ## 6. Install flatpaks
