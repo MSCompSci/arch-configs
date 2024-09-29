@@ -17,15 +17,33 @@
 - noto-fonts 
 - ttf-hack-nerd 
 - otf-commit-mono-nerd
+- otf-font-awesome
 - qtct 
 - lxappearance 
+- kvantum
 - starship 
 ### WM and Desktop Environment
 - sway 
+- swaybg
+- waybar
 - lxqt-policykit 
 - alacritty
 - fuzzel 
+- lximage-qt
+- lxqt-archiver
+- pcmanfm-qt
 - flatpak
+- grim
+- flameshot
+- gvfs
+- gedit
+- gedit-plugins
+- firefox
+- chromium
+- keepassxc
+### Utilities
+- git
+
 
 ## 2. Set up desktop
 ```bash
@@ -51,7 +69,6 @@ curl https://raw.githubusercontent.com/MSCompSci/arch-configs/refs/heads/main/co
 
 ## 4. Install flatpaks
 `flatpak install flathub <PACKAGES>`
-- org.mozilla.firefox
 - com.github.tchx84.Flatseal
 - com.discordapp.Discord
 
