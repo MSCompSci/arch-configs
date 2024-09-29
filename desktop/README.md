@@ -41,8 +41,12 @@
 - firefox
 - chromium
 - keepassxc
+- code
+- gnome-keyring
+- seahorse
 ### Utilities
 - git
+- github-cli
 
 
 ## 2. Set up desktop
@@ -50,33 +54,68 @@
 # Create user directors
 xdg-user-dirs-update
 
-# Set up starship
-# Add "eval "$(starship init bash)" " to the end of ~/.bashrc
-starship preset tokyo-night -o ~/.config/starship.toml
-source ~/.bashrc
+# Set default apps
+xdg-mime default pcmanfm-qt.desktop inode/directory
+
+xdg-settings set default-web-browser chromium.desktop
 
 # Set environment variables in /etc/environment
 nano /etc/environment
+```
+
+## 3. Set up keyring
+```bash
+# Set up keyring
+## Add to /etc/pam.d/login
+###  auth       optional     pam_gnome_keyring.so
+#### session    optional     pam_gnome_keyring.so auto_start
+sudo rnano /etc/pam.d/login
+
+## Add to /etc/pam.d/passwd
+### password	optional	pam_gnome_keyring.so
+sudo rnano /etc/pam.d/passwd
+
+## Set GPG pinentry program to "pinentry-program /usr/bin/pinentry-gnome3"
+nano ~/.gnupg/gpg-agent.conf
+```
+
+## 4. Set up Git
+```bash
+# Set git credential helper
+git config --global credential.helper /usr/lib/git-core/git-credential-libsecret
+
+# Import key
+gpg --import key.asc
+
+# Set username
+git config --global user.name "USERNAME"
+
+# Set email
+git config --global user.email "EMAIL"
+```
+
+## 5. Configure Programs
+```bash
+# Set up starship
+## Add "eval "$(starship init bash)" " to the end of ~/.bashrc
+starship preset tokyo-night -o ~/.config/starship.toml
+source ~/.bashrc
 
 # Add sway config
 mkdir .config/sway
 
 curl https://raw.githubusercontent.com/MSCompSci/arch-configs/refs/heads/main/configs/config > ~/.config/sway/config
-
 ```
 
-## 3. Logout and then Login and Start sway
-
-## 4. Install flatpaks
+## 6. Install flatpaks
 `flatpak install flathub <PACKAGES>`
 - com.github.tchx84.Flatseal
 - com.discordapp.Discord
 
-## 5. Download and install icons and themes
-- [Kora icon theme](https://github.com/bikass/kora)
-- [Install icon theme](https://wiki.archlinux.org/title/Icons#Manually)
+## 7. Logout, login, and restart Sway
 
-- [Sweet KDE QT theme](https://store.kde.org/p/1294013)
-- [Sweet New Flavor GTK3/4 theme](https://www.gnome-look.org/p/1253385)
-
-- [Oreo Cursors](https://www.gnome-look.org/p/1360254)
+## 8. Download and install icons and themes
+- [Sweet-Dark theme](https://github.com/EliverLara/Sweet)
+- [Sweet Kvantum/QT theme](https://github.com/EliverLara/Sweet/tree/nova)
+- [BeautyFolders and BeautyLine Icons](https://store.kde.org/p/1425426/)
+- [Layan-Border Cursors](https://store.kde.org/p/1365214/)
