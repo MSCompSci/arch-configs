@@ -1,0 +1,71 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    border: none;
+    border-radius: 0px;
+    font-family: "CommitMono",FontAwesome;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    transition-duration: .5s;
+    color: #ffffff;
+    background: transparent;
+}
+
+.modules-right {
+    margin: 4px;
+    padding: 0 8px 0 16px;
+    border-radius: 30px;
+    background: rgb(66,26,101);
+    background: linear-gradient(90deg, rgba(66,26,101,0.7049019436876314) 25%, rgba(36,142,158,0.7049019436876314) 100%);
+}
+
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+window#waybar.chromium {
+    background-color: #000000;
+    border: none;
+}
+
+#workspaces button {
+    background: #31104f;
+    color: #ffffff;
+    border-radius: 999px;
+    margin: 12px 4px;
+    padding: 7px 8px;
+}
+
+#workspaces button:hover, #workspaces button.focused:hover {
+    background: #a586d6;
+    color: black;
+}
+
+#workspaces button.focused {
+  background: #5d2d87;
+
+}
+
+#clock, #custom-power, #network,  #tray {
+    margin: 4px 0;
+}
+
+#custom-power {
+    background: transparent;
+    border: solid 1px #481f6d;
+    color: #ffffff;
+    border-radius: 999px;
+    margin: 6px 4px;
+    padding: 0 16px 0 14px;
+    transition-duration: .5s;
+
+}
+
+#custom-power:hover {
+    background: #a586d6;
+    color: black;
+
+}

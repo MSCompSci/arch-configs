@@ -101,10 +101,11 @@ git config --global user.email "EMAIL"
 starship preset tokyo-night -o ~/.config/starship.toml
 source ~/.bashrc
 
-# Add sway config
+# Add sway configs to
 mkdir .config/sway
 
-curl https://raw.githubusercontent.com/MSCompSci/arch-configs/refs/heads/main/configs/sway/config > ~/.config/sway/config
+# Add waybar configs to
+mkdir .config/waybar
 ```
 
 ## 6. Install flatpaks
